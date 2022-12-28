@@ -1,4 +1,5 @@
 <template>
+<h1>此项目是用于学习vue3</h1>
 <div>姓名：{{name}}</div>
 <div>性别：{{sex}}</div>
 <div>职业：{{job.type}}</div>
