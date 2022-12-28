@@ -6,7 +6,15 @@
 <div>薪资：{{job.money}}</div>
 <div>爱好：{{hobby}}</div>
 <button @click="change">按钮</button>
-<demo @hello='changeHello' sex="男" name='斯蒂芬'/>
+<demo @hello='changeHello' sex="男" name='斯蒂芬'>
+  <!-- #slot 暂时应该是不兼容，子组件的坑显示不出来，所以先都使用v-slot -->
+  <template v-slot:sb>
+    <span>父组件插入到子组件的内容sb</span>
+  </template>
+  <template v-slot:nb>
+    <span>父组件插入到子组件的内容NB</span>
+  </template>
+</demo>
 </template>
 
 <script>

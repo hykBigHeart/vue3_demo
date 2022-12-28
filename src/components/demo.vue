@@ -2,6 +2,8 @@
   <div class="demo">
     <h1>我是demo子组件</h1>
     <button @click="clickBtn">子组件点击</button>
+    <slot name="nb"></slot>
+    <slot name="sb"></slot>
   </div>
 </template>
 
@@ -12,6 +14,7 @@ export default {
   emits: ['hello'],
   setup(props, context) {
     // console.log(props, context.attrs)
+    console.log('context', context)
     console.log('context.slots', context.slots)
     function clickBtn() {
       context.emit('hello', '小明')
@@ -26,7 +29,7 @@ export default {
 <style lang='scss' scoped>
 .demo {
   background-color: aqua;
-  width: 100px;
+  width: 600px;
   height: 600px;
   h1 {
     color: red
