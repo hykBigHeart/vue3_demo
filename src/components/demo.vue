@@ -24,6 +24,7 @@ export default {
   props: ['name', 'sex'],
   emits: ['hello'],
   setup(props, context) {
+    // dev 分支首次提交测试
     // console.log(props, context.attrs)
     // console.log('context', context)
     // console.log('context.slots', context.slots)
